@@ -1,0 +1,28 @@
+###########################################################
+# 插件帮助地址：https://www.yyc-bloc.com/QQConnect.html      #
+###########################################################
+Server_Name: "生存服"
+
+# 机器人配置
+Bot:
+  QQ: 123456
+  Password: "123456"
+
+# 启用转发的群聊
+Groups:
+  - 123456
+
+# 管理员QQ设置
+Admins:
+  - 123456
+
+WordFilter:
+  # 群聊到服务器
+  QQToServer:
+    - sb
+    - 群公告
+  # QQ -> 服务器
+  ServerToQQ:
+    - image
+
+Version: "1.0"

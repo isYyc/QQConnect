@@ -1,0 +1,86 @@
+###########################################################
+# Format部分变量表：https://www.yyc-bloc.com/QQConnect.html #
+###########################################################
+# Enable : 是否开启这个功能，true为开启，false为关闭            #
+# Format : 通知消息的格式，可以写字符和变量，可自定义             #
+###########################################################
+
+# QQ -> 服务器消息
+QQToServer:
+  Enable: true
+  Format: "&7[&6%group_id%&7][&6%group_name%&7] &e%sender_id% &7>> &e%message%"
+
+# 服务器消息 -> QQ
+ServerToQQ:
+  Enable: true
+  Format:
+    - "[%server_name%][%multiverse_world_alias%] %player_name% >> %message%"
+
+# 加入消息 -> QQ
+JoinToQQ:
+  Enable: true
+  Format:
+    - "玩家 %player_name% 加入了服务器。"
+
+# 退出消息 -> QQ
+QuitToQQ:
+  Enable: true
+  Format:
+    - "玩家 %player_name% 离开了服务器。"
+
+# QQ -> 修改密码
+ChangePassword:
+  Enable: true
+  # 修改密码的命令
+  Command: "authme changepassword %player% %password%"
+  # 密码允许的长度
+  PasswordLength: "5-15"
+  # 密码允许的字符
+  Regex: "[!-~]*"
+
+# QQ -> 查询玩家
+PlayerState:
+  Enable: true
+  # 是否允许所有群员使用
+  AllowMember: false
+  Format:
+    - "玩家 %player_name% 信息:"
+    - "─────────────── "
+    - "状态: 在线"
+    - "位置: %player_world%"
+    - "血量: %player_health%/%player_max_health%"
+    - "时长: %player_time%"
+    - "金币: %vault_eco_balance%"
+    - "延迟: %player_ping%"
+    - "───────────────"
+
+# 定期公告
+Announce:
+  Enable: true
+  # 周期 s
+  Period: 60
+  List:
+    - '公告1'
+    - '感谢使用 QQConnect 插件'
+
+JoinGroupMsg:
+  Enalbe: true
+  Format: "%joiner_id% 加入了群聊"
+
+QuitGroupMsg:
+  Enalbe: true
+  Format: "%joiner_id% 退出了群聊"
+
+SendCmd:
+  Enable: true
+  AllowCmd:
+    - "list"
+    - "tps"
+
+PayMoney:
+  Enable: true
+
+LookMoney:
+  Enable: true
+
+Version: "1.0"

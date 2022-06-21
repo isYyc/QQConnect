@@ -1,0 +1,13 @@
+name: QQConnect
+version: '${version}'
+main: org.yycstudio.qqconnect.QQConnect
+authors: [ yyc ]
+depend: [ MiraiMC, PlaceholderAPI ]
+softdepend: [ Vault ]
+description: QQConnect power by mirai
+website: https://www.yyc-blog.cn/
+
+commands:
+  qqconnect:
+    description: 主命令
+    aliases: [qqc]
